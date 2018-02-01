@@ -25,7 +25,7 @@ class BeginViewController: UIViewController {
         let remoteConfigSettings = RemoteConfigSettings(developerModeEnabled: true)
         remoteConfig.configSettings = remoteConfigSettings!
         
-        //plist파일에서 인앱의 기본값 성정
+        //plist파일에서 인앱의 기본값 설정
         remoteConfig.setDefaults(fromPlist: "RemoteConfigDefaults")
         
         //원격 구성 서비스에서 값을 가져오는 fetchWithExpirationDuration:completionHandler: 요청을 만들고 activateFetched를 호출하여 해당 값을 앱에 적용

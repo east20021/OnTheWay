@@ -7,4 +7,6 @@ target 'OnTheWay' do
 
   # Pods for OnTheWay
 pod 'Firebase/RemoteConfig'
+pod 'Firebase/Core'
+pod 'TextFieldEffects'
 end
