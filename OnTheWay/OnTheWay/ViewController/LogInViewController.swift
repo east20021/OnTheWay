@@ -19,16 +19,30 @@ class LogInViewController: UIViewController {
     
     private let remoteConfig = RemoteConfig.remoteConfig()
     private var themaColor: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setThemaColor()
-        
     }
+    
+    
     func setThemaColor() {
         themaColor = remoteConfig["splash_background"].stringValue
         
         statusBar.backgroundColor = UIColor(hex: themaColor)
         logInButton.backgroundColor = UIColor(hex: themaColor)
         signUpButton.backgroundColor = UIColor(hex: themaColor)
+    }
+}
+
+extension LogInViewController: UITextFieldDelegate {
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
