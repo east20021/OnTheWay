@@ -12,6 +12,8 @@
 		9B760C4C202314F5004A26B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B760C4A202314F5004A26B7 /* Main.storyboard */; };
 		9B760C4E202314F5004A26B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B760C4D202314F5004A26B7 /* Assets.xcassets */; };
 		9B760C51202314F5004A26B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B760C4F202314F5004A26B7 /* LaunchScreen.storyboard */; };
+		9B760C5C202318F6004A26B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B760C5B202318F6004A26B7 /* GoogleService-Info.plist */; };
+		9B760C5E20231A86004A26B7 /* RemoteConfigDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9B760C5D20231A86004A26B7 /* RemoteConfigDefaults.plist */; };
 		C094ADFC892BCEADB0B2470E /* Pods_OnTheWay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CF390564347471A6D3799E1 /* Pods_OnTheWay.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +26,8 @@
 		9B760C4D202314F5004A26B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B760C50202314F5004A26B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B760C52202314F5004A26B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B760C5B202318F6004A26B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9B760C5D20231A86004A26B7 /* RemoteConfigDefaults.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = RemoteConfigDefaults.plist; sourceTree = "<group>"; };
 		A44CFE15F6478A6FD31F25EF /* Pods-OnTheWay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheWay.release.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheWay/Pods-OnTheWay.release.xcconfig"; sourceTree = "<group>"; };
 		AAFC88AA660A416BF12CF167 /* Pods-OnTheWay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnTheWay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OnTheWay/Pods-OnTheWay.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,14 +65,40 @@
 		9B760C45202314F5004A26B7 /* OnTheWay */ = {
 			isa = PBXGroup;
 			children = (
+				9B760C5A2023172A004A26B7 /* ViewController */,
+				9B760C5920231721004A26B7 /* Model */,
+				9B760C582023170E004A26B7 /* Storyboard */,
 				9B760C46202314F5004A26B7 /* AppDelegate.swift */,
-				9B760C48202314F5004A26B7 /* ViewController.swift */,
-				9B760C4A202314F5004A26B7 /* Main.storyboard */,
 				9B760C4D202314F5004A26B7 /* Assets.xcassets */,
 				9B760C4F202314F5004A26B7 /* LaunchScreen.storyboard */,
 				9B760C52202314F5004A26B7 /* Info.plist */,
+				9B760C5B202318F6004A26B7 /* GoogleService-Info.plist */,
+				9B760C5D20231A86004A26B7 /* RemoteConfigDefaults.plist */,
 			);
 			path = OnTheWay;
+			sourceTree = "<group>";
+		};
+		9B760C582023170E004A26B7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9B760C4A202314F5004A26B7 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		9B760C5920231721004A26B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9B760C5A2023172A004A26B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9B760C48202314F5004A26B7 /* ViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		A08202544C5EAA69B8357361 /* Frameworks */ = {
@@ -150,6 +180,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B760C5C202318F6004A26B7 /* GoogleService-Info.plist in Resources */,
+				9B760C5E20231A86004A26B7 /* RemoteConfigDefaults.plist in Resources */,
 				9B760C51202314F5004A26B7 /* LaunchScreen.storyboard in Resources */,
 				9B760C4E202314F5004A26B7 /* Assets.xcassets in Resources */,
 				9B760C4C202314F5004A26B7 /* Main.storyboard in Resources */,
@@ -184,11 +216,15 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OnTheWay/Pods-OnTheWay-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
