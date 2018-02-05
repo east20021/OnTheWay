@@ -1,48 +1,46 @@
 //
-//  LogInViewController.swift
+//  SignUpViewController.swift
 //  OnTheWay
 //
-//  Created by lee on 2018. 2. 1..
+//  Created by lee on 2018. 2. 5..
 //  Copyright © 2018년 smith. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-class LogInViewController: UIViewController {
+class SignUpViewController: UIViewController {
     
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var signUpButton: UIButton!
-    @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var statusBar: UIView!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    
     
     private let remoteConfig = RemoteConfig.remoteConfig()
     private var themaColor: String!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setThemaColor()
+
+        // Do any additional setup after loading the view.
     }
-    
-    
+
     func setThemaColor() {
         themaColor = remoteConfig["splash_background"].stringValue
         
         statusBar.backgroundColor = UIColor(hex: themaColor)
-        logInButton.backgroundColor = UIColor(hex: themaColor)
         signUpButton.backgroundColor = UIColor(hex: themaColor)
+        cancelButton.backgroundColor = UIColor(hex: themaColor)
     }
     
-    @IBAction func signUpButtonAction(_ sender: Any) {
-        let signUpStoryboard = UIStoryboard(name: "SignUp", bundle: nil)
-        let signUpVC = signUpStoryboard.instantiateViewController(withIdentifier: "SignUpVC") as! SignUpViewController
-        self.present(signUpVC, animated: true, completion: nil)
+    @IBAction func cancelButtonAction(_ sender: Any) {
+        self.view.endEditing(true)
+        self.dismiss(animated: true, completion: nil)
     }
-    
 }
 
-extension LogInViewController: UITextFieldDelegate {
+extension SignUpViewController: UITextFieldDelegate {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -53,3 +51,4 @@ extension LogInViewController: UITextFieldDelegate {
         return true
     }
 }
+
