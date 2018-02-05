@@ -137,6 +137,7 @@
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="G3T-57-ERh" id="JCU-ma-KSR"/>
+                        <outlet property="imgView" destination="ERY-y1-0kU" id="pMq-51-kTy"/>
                         <outlet property="signUpButton" destination="N6t-5e-Q63" id="75k-Fk-4WM"/>
                         <outlet property="statusBar" destination="kr5-bu-xUh" id="cZC-z1-djP"/>
                     </connections>
