@@ -23,12 +23,6 @@ class LogInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setThemaColor()
-        
-        Auth.auth().addStateDidChangeListener { (auth, user) in
-            let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
-            self.present(mainVC, animated: true, completion: nil)
-        }
     }
     
     
@@ -44,9 +38,15 @@ class LogInViewController: UIViewController {
     @IBAction func logInButtonAction(_ sender: Any) {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (user, error) in
             if error != nil {
-                let alert = UIAlertController(title: "에러", message: error.debugDescription, preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "에러", message: "이메일이나 비밀번호를 확인해 주세요", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "확인", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
+            } else {
+            
+                let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
+                self.present(mainVC, animated: true, completion: nil)
+    
             }
         }
     }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MainViewController: UIViewController {
 
@@ -16,6 +17,8 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func signOutButton(_ sender: Any) {
+        try! Auth.auth().signOut()
+        dismiss(animated: true, completion: nil)
     }
     
 }
