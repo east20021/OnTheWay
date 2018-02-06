@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="ThN-2K-1q9">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" id="gBd-rN-GGC" customClass="MainViewController" customModule="OnTheWay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nmt-4l-vbI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWn-PE-9ee">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j30-Gi-nNJ">
+                                        <rect key="frame" x="160" y="72" width="54" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="signOut"/>
+                                        <connections>
+                                            <action selector="signOutButton:" destination="gBd-rN-GGC" eventType="touchUpInside" id="Iww-kN-SnV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zWn-PE-9ee" firstAttribute="leading" secondItem="gR2-Nf-kn8" secondAttribute="leading" id="6gb-w1-H8O"/>
+                            <constraint firstItem="zWn-PE-9ee" firstAttribute="trailing" secondItem="gR2-Nf-kn8" secondAttribute="trailing" id="BXE-f9-I8d"/>
+                            <constraint firstItem="zWn-PE-9ee" firstAttribute="bottom" secondItem="gR2-Nf-kn8" secondAttribute="bottom" id="Det-SD-VQO"/>
+                            <constraint firstItem="zWn-PE-9ee" firstAttribute="top" secondItem="Nmt-4l-vbI" secondAttribute="top" id="aJu-Xp-CGe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gR2-Nf-kn8"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lFd-fb-UTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="240.80000000000001" y="-210.04497751124438"/>
+        </scene>
+    </scenes>
+</document>

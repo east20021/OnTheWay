@@ -64,6 +64,9 @@
                                 <state key="normal" title="회원가입">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="signUpButtonAction:" destination="46d-LG-xm3" eventType="touchUpInside" id="e3Z-pd-6Bk"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G3T-57-ERh">
                                 <rect key="frame" x="16" y="459" width="343" height="40"/>
@@ -137,7 +140,10 @@
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="G3T-57-ERh" id="JCU-ma-KSR"/>
+                        <outlet property="emailTextField" destination="Zb7-sP-lGC" id="Ek0-pR-K6y"/>
                         <outlet property="imgView" destination="ERY-y1-0kU" id="pMq-51-kTy"/>
+                        <outlet property="nameTextField" destination="Wu3-2s-sbi" id="T9E-2Y-sDX"/>
+                        <outlet property="passwordTextField" destination="2HE-Jb-Ju6" id="XLV-6u-eQ3"/>
                         <outlet property="signUpButton" destination="N6t-5e-Q63" id="75k-Fk-4WM"/>
                         <outlet property="statusBar" destination="kr5-bu-xUh" id="cZC-z1-djP"/>
                     </connections>

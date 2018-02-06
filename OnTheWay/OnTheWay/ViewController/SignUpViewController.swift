@@ -14,8 +14,11 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate, UI
     @IBOutlet weak var statusBar: UIView!
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
-    @IBOutlet weak var imgView: UIImageView!
     
+    @IBOutlet weak var imgView: UIImageView!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     private let remoteConfig = RemoteConfig.remoteConfig()
     private var themaColor: String!
@@ -57,7 +60,28 @@ class SignUpViewController: UIViewController, UINavigationControllerDelegate, UI
         dismiss(animated: true, completion: nil)
     }
     
-    
+    @IBAction func signUpButtonAction(_ sender: Any) {
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            if error != nil {
+                //registration failure
+                print("error creating user")
+            } else {
+                //registration successful
+                let uid = Auth.auth().currentUser?.uid
+                let image = UIImageJPEGRepresentation(self.imgView.image!, 0.1)
+                
+                Storage.storage().reference().child("userImages").child(uid!).putData(image!, metadata: nil, completion: { (data, error) in
+                    let imageUrl = data?.downloadURL()?.absoluteString
+                    Database.database().reference().child("user").child(uid!).setValue(["userName": self.nameTextField.text!, "profileImageUrl": imageUrl])
+                })
+            }
+        }
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainVC = mainStoryboard.instantiateViewController(withIdentifier: "MainVC") as! MainViewController
+        self.present(mainVC, animated: true, completion: nil)
+    }
     
     @IBAction func cancelButtonAction(_ sender: Any) {
         self.view.endEditing(true)
