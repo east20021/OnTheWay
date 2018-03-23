@@ -2,12 +2,11 @@
 //  AppDelegate.swift
 //  OnTheWay
 //
-//  Created by lee on 2018. 2. 1..
+//  Created by lee on 2018. 3. 23..
 //  Copyright © 2018년 smith. All rights reserved.
 //
 
 import UIKit
-import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        FirebaseApp.configure()
         return true
     }
 
