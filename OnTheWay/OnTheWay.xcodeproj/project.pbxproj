@@ -11,6 +11,7 @@
 		9BB27DD62064D94A0061C46D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BB27DD52064D94A0061C46D /* Assets.xcassets */; };
 		9BB27DD92064D94A0061C46D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB27DD72064D94A0061C46D /* LaunchScreen.storyboard */; };
 		9BB27DE12064DD8F0061C46D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BB27DE02064DD8F0061C46D /* LoginViewController.swift */; };
+		9BB27DE82064E5130061C46D /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BB27DE72064E5130061C46D /* LogIn.storyboard */; };
 		AEB43B978A8145DDD5F48453 /* Pods_OnTheWay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2094C3952E1D181E47A75208 /* Pods_OnTheWay.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,7 @@
 		9BB27DD82064D94A0061C46D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BB27DDA2064D94A0061C46D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BB27DE02064DD8F0061C46D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9BB27DE72064E5130061C46D /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		9BB27DCD2064D94A0061C46D /* OnTheWay */ = {
 			isa = PBXGroup;
 			children = (
+				9BB27DE62064E4FC0061C46D /* StoryBoard */,
 				9BB27DE22064DD960061C46D /* ViewController */,
 				9BB27DE32064DDB90061C46D /* Model */,
 				9BB27DE42064DDC40061C46D /* Extension */,
@@ -107,6 +110,14 @@
 			children = (
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		9BB27DE62064E4FC0061C46D /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				9BB27DE72064E5130061C46D /* LogIn.storyboard */,
+			);
+			path = StoryBoard;
 			sourceTree = "<group>";
 		};
 		C366DE66BC519F9432014063 /* Frameworks */ = {
@@ -180,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BB27DD92064D94A0061C46D /* LaunchScreen.storyboard in Resources */,
+				9BB27DE82064E5130061C46D /* LogIn.storyboard in Resources */,
 				9BB27DD62064D94A0061C46D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
